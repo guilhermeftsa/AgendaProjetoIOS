@@ -10,9 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var senhaTF: UITextField!
+    @IBOutlet weak var botaoEntrar: UIButton!
+    @IBOutlet weak var botaoCadastro: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.botaoEntrar.layer.cornerRadius = self.botaoEntrar.frame.height / 2
+        self.botaoCadastro.layer.cornerRadius = self.botaoEntrar.frame.height / 2
     }
 
     override func didReceiveMemoryWarning() {
