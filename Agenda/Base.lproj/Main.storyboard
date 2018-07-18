@@ -43,7 +43,7 @@
                                 <state key="normal" title="Cadastro"/>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icone Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Acg-P5-XDy">
-                                <rect key="frame" x="67" y="48" width="240" height="256"/>
+                                <rect key="frame" x="68" y="48" width="239" height="256"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -57,7 +57,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Oxm-BN-qjM" secondAttribute="trailing" constant="16" id="TdV-qC-dJo"/>
                             <constraint firstItem="Oxm-BN-qjM" firstAttribute="top" secondItem="OpU-aI-EAy" secondAttribute="bottom" constant="40" id="dn7-O7-aVe"/>
                             <constraint firstItem="4FS-UX-cdp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="g1t-x2-jSi"/>
-                            <constraint firstItem="Acg-P5-XDy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="izn-3e-KSc"/>
+                            <constraint firstItem="Acg-P5-XDy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="68" id="izn-3e-KSc"/>
                             <constraint firstItem="Oxm-BN-qjM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="jAH-Md-gRs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4FS-UX-cdp" secondAttribute="trailing" constant="100" id="mCQ-ok-fM2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Acg-P5-XDy" secondAttribute="trailing" constant="68" id="o8e-ZI-NAw"/>
