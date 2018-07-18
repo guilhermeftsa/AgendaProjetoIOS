@@ -11,6 +11,9 @@
 		832B1FA320FF6B970029B905 /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B1FA020FF6B970029B905 /* Storyboard.swift */; };
 		832B1FA420FF6B970029B905 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B1FA120FF6B970029B905 /* Localizable.swift */; };
 		832B1FA620FF6CF10029B905 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B1FA520FF6CF10029B905 /* Colors.swift */; };
+		832B1FA820FF74770029B905 /* LoginRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B1FA720FF74770029B905 /* LoginRequestFactory.swift */; };
+		832B1FAA20FF749D0029B905 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B1FA920FF749D0029B905 /* LoginService.swift */; };
+		832B1FAC20FF79640029B905 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832B1FAB20FF79640029B905 /* Usuario.swift */; };
 		83538DAD20FF66D10014DCED /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83538DAC20FF66D10014DCED /* Localizable.strings */; };
 		83538DAF20FF67670014DCED /* Colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 83538DAE20FF67670014DCED /* Colors.json */; };
 		83EAF27420FE3A4E0054586B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EAF27320FE3A4E0054586B /* AppDelegate.swift */; };
@@ -29,6 +32,9 @@
 		832B1FA020FF6B970029B905 /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		832B1FA120FF6B970029B905 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		832B1FA520FF6CF10029B905 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		832B1FA720FF74770029B905 /* LoginRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestFactory.swift; sourceTree = "<group>"; };
+		832B1FA920FF749D0029B905 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		832B1FAB20FF79640029B905 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		83538DAC20FF66D10014DCED /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		83538DAE20FF67670014DCED /* Colors.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Colors.json; sourceTree = "<group>"; };
 		83EAF27020FE3A4E0054586B /* Agenda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Agenda.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +69,7 @@
 		83538DA420FF5EAF0014DCED /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				832B1FAB20FF79640029B905 /* Usuario.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -77,6 +84,8 @@
 		83538DA720FF610F0014DCED /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				832B1FA720FF74770029B905 /* LoginRequestFactory.swift */,
+				832B1FA920FF749D0029B905 /* LoginService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -190,6 +199,7 @@
 				83EAF26C20FE3A4E0054586B /* Sources */,
 				83EAF26D20FE3A4E0054586B /* Frameworks */,
 				83EAF26E20FE3A4E0054586B /* Resources */,
+				EFFF53346CCD25B814D6088D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -280,6 +290,32 @@
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT\"/SwiftGen/bin/swiftgen strings -t structured-swift3 \"$PROJECT_DIR/$PROJECT_NAME/Application/Supporting Files/Generators/Localizable.strings\" --output \"$PROJECT_DIR/$PROJECT_NAME/Application/Supporting Files/Generated/Localizable.swift\"\n\n\"$PODS_ROOT\"/SwiftGen/bin/swiftgen xcassets -t swift3 \"$PROJECT_DIR/$PROJECT_NAME/Application/Supporting Files/Assets.xcassets\" --output \"$PROJECT_DIR/$PROJECT_NAME/Application/Supporting Files/Generated/Assets.swift\"\n\n\"$PODS_ROOT\"/SwiftGen/bin/swiftgen colors -t swift3 \"$PROJECT_DIR/$PROJECT_NAME/Application/Supporting Files/Generators/Colors.json\" --output \"$PROJECT_DIR/$PROJECT_NAME/Application/Supporting Files/Generated/Colors.swift\"\n\n\"$PODS_ROOT\"/SwiftGen/bin/swiftgen storyboards -t swift3 \"$PROJECT_DIR/$PROJECT_NAME\" --output \"$PROJECT_DIR/$PROJECT_NAME/Application/Supporting Files/Generated/Storyboard.swift\"\n";
 		};
+		EFFF53346CCD25B814D6088D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Agenda/Pods-Agenda-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Agenda/Pods-Agenda-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -289,10 +325,13 @@
 			files = (
 				832B1FA320FF6B970029B905 /* Storyboard.swift in Sources */,
 				832B1FA620FF6CF10029B905 /* Colors.swift in Sources */,
+				832B1FA820FF74770029B905 /* LoginRequestFactory.swift in Sources */,
 				83EAF27620FE3A4E0054586B /* ViewController.swift in Sources */,
 				832B1FA420FF6B970029B905 /* Localizable.swift in Sources */,
+				832B1FAC20FF79640029B905 /* Usuario.swift in Sources */,
 				83EAF27420FE3A4E0054586B /* AppDelegate.swift in Sources */,
 				832B1FA220FF6B970029B905 /* Assets.swift in Sources */,
+				832B1FAA20FF749D0029B905 /* LoginService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

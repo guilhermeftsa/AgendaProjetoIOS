@@ -7,4 +7,9 @@ target 'Agenda' do
 
   # Pods for Agenda
   pod 'SwiftGen'
+  pod 'Alamofire'
+  pod 'ObjectMapper'
+  pod 'AlamofireObjectMapper'
+  pod 'Realm'
+  pod 'RealmSwift'
 end
