@@ -5,24 +5,31 @@
 //  Created by administrador on 18/07/2018.
 //  Copyright © 2018 administrador. All rights reserved.
 //
-
+import RealmSwift
+import Realm
 import ObjectMapper
 
-class Usuario: Mappable {
+class Usuario : Object, Mappable {
     
-    var id: Int?
-    var email: String?
-    
-    var accessToken: String?
-    var client: String?
-    var uid: String?
-    
-    required init?(map: Map) {
-        
+    required convenience init?(map: Map) {
+        self.init()
+    }
+    override static func primaryKey() -> String?{
+        return "id"
     }
     
+    var id = RealmOptional<Int>()
+    @objc dynamic var email: String?
+    
+    
+   @objc dynamic var accessToken: String?
+   @objc dynamic var client: String?
+   @objc dynamic var uid: String?
+    
+   
+    
     func mapping(map: Map) {
-        self.id <- map ["id"]
+        self.id.value <- map ["id"]
         self.email <- map ["email"]
     }
     

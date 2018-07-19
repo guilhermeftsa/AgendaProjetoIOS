@@ -21,9 +21,9 @@ class ViewController: UIViewController {
     
     //MARK: - Life
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad()        
         
-        self.service = LoginService()
+        self.service = LoginService(delegate: self)
         self.botaoEntrar.layer.cornerRadius = self.botaoEntrar.frame.height / 2
         self.botaoCadastro.layer.cornerRadius = self.botaoEntrar.frame.height / 2
     }
@@ -33,9 +33,14 @@ class ViewController: UIViewController {
             self.service.postlogin(email: email, senha: senha)
         }
     }
-     
-
-    
-
+  
 }
 
+extension ViewController : LoginServiceDelegate{
+    func postLoginFailure(error: String) {
+        print (error)
+    }
+    func postLoginSuccess() {
+        print("pegou o banco")
+    }
+}

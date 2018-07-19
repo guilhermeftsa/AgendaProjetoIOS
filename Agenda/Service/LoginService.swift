@@ -7,8 +7,22 @@
 //
 import Alamofire
 import AlamofireObjectMapper
+import Realm
+import RealmSwift
+
+protocol LoginServiceDelegate{
+    func postLoginSuccess()
+    func postLoginFailure(error: String)
+    
+}
 
 class LoginService{
+    
+    var delegate: LoginServiceDelegate
+    
+    required init (delegate:LoginServiceDelegate){
+        self.delegate = delegate
+    }
     
     func postlogin(email:String, senha: String){
         loginRequestFactory.postLogin(email: email, senha: senha).validate().responseObject(keyPath: "data"){            (response: DataResponse<Usuario>) in
@@ -17,12 +31,14 @@ class LoginService{
             case .success:
                 
                 if let user = response.result.value{
-                    print("Email \(user.email ?? "") com id \(user.id ?? 0)")
-                    
-                    response.response?.allHeaderFields
+                    UsuarioViewModel.clear()
+                    user.setHeaderParams(header: response.response?.allHeaderFields)
+                    UsuarioViewModel.save(usuario: user)
                 }
+                self.delegate.postLoginSuccess()
+                
             case .failure(let error):
-                print(error.localizedDescription)
+                self.delegate.postLoginFailure(error: error.localizedDescription)
             }
         }
     }
