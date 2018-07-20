@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="201" id="i9g-9x-iws" customClass="ContatosTableViewCell" customModule="Agenda" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="695" height="201"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i9g-9x-iws" id="uSu-Jf-QNc">
+                <rect key="frame" x="0.0" y="0.0" width="695" height="200.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dcm-W6-bXL" userLabel="StackView">
+                        <rect key="frame" x="20" y="11" width="655" height="179"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DIG-5g-xst">
+                                <rect key="frame" x="0.0" y="0.0" width="327.5" height="179"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nomeContato" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSG-YZ-Thz">
+                                <rect key="frame" x="327.5" y="0.0" width="327.5" height="179"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="dcm-W6-bXL" secondAttribute="bottom" id="90Z-iu-Zop"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="dcm-W6-bXL" secondAttribute="trailing" id="ESH-Qh-QOu"/>
+                    <constraint firstItem="dcm-W6-bXL" firstAttribute="top" secondItem="uSu-Jf-QNc" secondAttribute="topMargin" id="QEc-0a-aH7"/>
+                    <constraint firstItem="dcm-W6-bXL" firstAttribute="leading" secondItem="uSu-Jf-QNc" secondAttribute="leadingMargin" id="X9j-x1-WLJ"/>
+                </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                </userDefinedRuntimeAttributes>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="NomeUsuarioLabel" destination="rSG-YZ-Thz" id="1tg-l6-Gjf"/>
+                <outlet property="imagemUsuario" destination="DIG-5g-xst" id="UID-H8-O86"/>
+                <outlet property="stackView" destination="dcm-W6-bXL" id="IhE-Pv-Nyu"/>
+            </connections>
+            <point key="canvasLocation" x="-858.5" y="-254.5"/>
+        </tableViewCell>
+    </objects>
+</document>

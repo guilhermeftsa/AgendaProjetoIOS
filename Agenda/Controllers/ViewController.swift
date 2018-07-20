@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var senhaTF: UITextField!
     
     @IBOutlet weak var botaoEntrar: UIButton!
-    @IBOutlet weak var botaoCadastro: UIButton!
+   
     
     //MARK: - Life
     override func viewDidLoad() {
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         
         self.service = LoginService(delegate: self)
         self.botaoEntrar.layer.cornerRadius = self.botaoEntrar.frame.height / 2
-        self.botaoCadastro.layer.cornerRadius = self.botaoEntrar.frame.height / 2
+        
     }
     
     @IBAction func logar(_ sender: UIButton) {
@@ -41,6 +41,6 @@ extension ViewController : LoginServiceDelegate{
         print (error)
     }
     func postLoginSuccess() {
-        print("pegou o banco")
+        self.perform(segue: StoryboardSegue.Main.segueEntrar)
     }
 }

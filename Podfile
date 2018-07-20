@@ -12,4 +12,5 @@ target 'Agenda' do
   pod 'AlamofireObjectMapper'
   pod 'Realm'
   pod 'RealmSwift'
+  pod 'Reusable'
 end

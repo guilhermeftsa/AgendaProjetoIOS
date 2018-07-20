@@ -9,6 +9,11 @@ PODS:
   - Realm/Headers (3.7.4)
   - RealmSwift (3.7.4):
     - Realm (= 3.7.4)
+  - Reusable (4.0.2):
+    - Reusable/Storyboard (= 4.0.2)
+    - Reusable/View (= 4.0.2)
+  - Reusable/Storyboard (4.0.2)
+  - Reusable/View (4.0.2)
   - SwiftGen (5.3.0)
 
 DEPENDENCIES:
@@ -17,6 +22,7 @@ DEPENDENCIES:
   - ObjectMapper
   - Realm
   - RealmSwift
+  - Reusable
   - SwiftGen
 
 SPEC REPOS:
@@ -26,6 +32,7 @@ SPEC REPOS:
     - ObjectMapper
     - Realm
     - RealmSwift
+    - Reusable
     - SwiftGen
 
 SPEC CHECKSUMS:
@@ -34,8 +41,9 @@ SPEC CHECKSUMS:
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   Realm: a469bb59e33f9926102ccaea4349822c53b9117e
   RealmSwift: a45861b21c180f5cf0f122144b9759fa8dde3e9e
+  Reusable: 584a5629747c52e0f6a77841b400dc2643f6fa0f
   SwiftGen: 4379bd3640b0a212a0f6ea3c494adba385513d10
 
-PODFILE CHECKSUM: 41c4537f47bc8b1f089385901a0b1ba7df9b04b3
+PODFILE CHECKSUM: 5ac4362b35332001dce9f53cc9b742c66764053b
 
 COCOAPODS: 1.5.3

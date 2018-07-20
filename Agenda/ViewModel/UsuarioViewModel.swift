@@ -25,4 +25,24 @@ import RealmSwift
             uiRealm.delete(uiRealm.objects(Usuario.self))
         }
     }
+    
+    static func setHeadersParams(headers: [AnyHashable : Any]?) {
+        
+        guard let headers = headers, let user = uiRealm.objects(Usuario.self).first else {
+            return
+        }
+        
+        try! uiRealm.write {
+            
+            if let accessToken = headers["Access-Token"] as? String {
+                user.accessToken = accessToken
+            }
+            if let client = headers["Client"] as? String {
+                user.client = client
+            }
+            if let uid = headers["Uid"] as? String {
+                user.uid = uid
+            }
+        }
+    }
 }

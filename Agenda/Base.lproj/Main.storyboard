@@ -39,21 +39,13 @@
                                     <action selector="logar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ykz-8F-6iy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JcE-Kc-ds8">
-                                <rect key="frame" x="100" y="569" width="175" height="30"/>
-                                <color key="backgroundColor" red="0.32339620590209961" green="0.74011069536209106" blue="0.82351583242416382" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Cadastro"/>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icone Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Acg-P5-XDy">
                                 <rect key="frame" x="68" y="48" width="239" height="256"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="JcE-Kc-ds8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="2mR-D5-w1F"/>
                             <constraint firstItem="4FS-UX-cdp" firstAttribute="top" secondItem="Oxm-BN-qjM" secondAttribute="bottom" constant="50" id="2wJ-Nx-snz"/>
-                            <constraint firstItem="JcE-Kc-ds8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6cZ-WS-blr"/>
                             <constraint firstItem="Acg-P5-XDy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="28" id="Hcs-rZ-S3p"/>
                             <constraint firstItem="OpU-aI-EAy" firstAttribute="top" secondItem="Acg-P5-XDy" secondAttribute="bottom" constant="50" id="IYo-zR-8v5"/>
                             <constraint firstItem="4FS-UX-cdp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KiS-Js-6OO"/>
@@ -65,21 +57,27 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4FS-UX-cdp" secondAttribute="trailing" constant="100" id="mCQ-ok-fM2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Acg-P5-XDy" secondAttribute="trailing" constant="68" id="o8e-ZI-NAw"/>
                             <constraint firstItem="OpU-aI-EAy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="r54-oI-ToL"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JcE-Kc-ds8" secondAttribute="trailing" constant="100" id="sYD-Xv-Krw"/>
-                            <constraint firstItem="JcE-Kc-ds8" firstAttribute="top" secondItem="4FS-UX-cdp" secondAttribute="bottom" constant="35" id="vPF-O1-Ne8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OpU-aI-EAy" secondAttribute="trailing" constant="16" id="ylZ-RE-dhj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="botaoCadastro" destination="JcE-Kc-ds8" id="I3U-0K-sBs"/>
                         <outlet property="botaoEntrar" destination="4FS-UX-cdp" id="mv7-X6-G0q"/>
                         <outlet property="emailTF" destination="OpU-aI-EAy" id="VSV-Rg-7VH"/>
                         <outlet property="senhaTF" destination="Oxm-BN-qjM" id="c1W-9k-G71"/>
+                        <segue destination="MTd-QZ-uH8" kind="show" identifier="segueEntrar" id="qbn-m9-PSQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Contatos-->
+        <scene sceneID="bA5-Wg-3sb">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Contatos" id="MTd-QZ-uH8" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ikM-5B-oDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="696" y="112"/>
         </scene>
     </scenes>
     <resources>
